@@ -6,9 +6,8 @@ client.on("ready", async () => {
 });
 
 client.on("message", async message => {
-  // when client detects a message
-  if (message.author.bot) return; // if the author of the message is a bot ignore the case
-  if (message.channel.id === "953731286659383349") return; //check if its the correct channel
+  if (message.channel.id === "953731286659383349"){
+  if (message.author.bot) return;
   if (message.content) {
     var e = parseInt(message.content) + 1;
     if (isNaN(parseFloat(e))) {
@@ -17,7 +16,7 @@ client.on("message", async message => {
     else if (e !== NaN) {
       return message.channel.send(e);
     }
-  }
+  }}
 })
 
 
