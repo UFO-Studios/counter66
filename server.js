@@ -1,18 +1,23 @@
-const { Client } = require("discord.js"); //makes process easy
-const client = new Client({ //makes it so bot runs everywhere(for testing)
-  intents: ["GUILDS", "GUILD_MESSAGES", "DIRECT_MESSAGES"],
-  partials: ["CHANNEL"]
+let Discord = require("discord.js")
+const client = new Discord.Client()
+
+client.on("ready", async () => {
+  console.log("Running!")
 });
-client.on("ready", () => {
-  console.log("bot is running"); //when bot is ready
-});
-client.on("messageCreate", async message => {
+
+client.on("message", async message => {
   // when client detects a message
   if (message.author.bot) return; // if the author of the message is a bot ignore the case
-  if (!message.content) {//when images and stuff get posted
-    return message.reply({
-      content: "invalid number" //makes the bot reply
-    });
+  if (message.content) {
+    var e = parseInt(message.content)+1;
+    if (isNaN(parseFloat(e))){
+      return message.channel.send('you ruined it');
+    }
+    else if (e !== NaN){
+      return message.channel.send(e);
+    }
   }
 })
-client.login(process.env.TOKEN); //login using token which doent exists yet
+
+
+client.login(process.env.token);
