@@ -11,7 +11,7 @@ client.on("message", async message => {
   if (message.content) {
     var e = parseInt(message.content) + 1;
     if (isNaN(parseFloat(e))) {
-      return message.reply('you ruined it');
+      return message.reply('you ruined it! Start at 0 again');
     }
     else if (e !== NaN) {
       return message.channel.send(e);
