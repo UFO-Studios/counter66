@@ -1,5 +1,6 @@
 let Discord = require("discord.js")
 const client = new Discord.Client()
+const { botToken } = require('./config.json')
 
 client.on("ready", async () => {
   console.log("Running!")
