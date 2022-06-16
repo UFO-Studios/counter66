@@ -9,9 +9,10 @@ client.on("ready", () => {
 client.on("messageCreate", async message => {
   // when client detects a message
   if (message.author.bot) return; // if the author of the message is a bot ignore the case
-  if (!message.content) //when images and stuff get posted
+  if (!message.content) {//when images and stuff get posted
     return message.reply({
       content: "invalid number" //makes the bot reply
     });
+  }
 })
 client.login(process.env.TOKEN); //login using token which doent exists yet
