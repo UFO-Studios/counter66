@@ -13,4 +13,5 @@ client.on("messageCreate", async message => {
     return message.reply({
       content: "invalid number" //makes the bot reply
     });
+}
 client.login(process.env.TOKEN); //login using token which doent exists yet
