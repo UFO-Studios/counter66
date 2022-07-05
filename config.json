@@ -1,4 +1,7 @@
 {
     "botToken": "OTgxNjE3NDU0NzM4NDQwMzcy.GO2_a3.ysnj2xndReKr-cE86WZIiVtSrBsCMxtH4RdbAM",
-    "channel": "940651490459140139"
+    "channel": "940651490459140139",
+    "prefix": "!a",
+    "clientId": "981617454738440372",
+	"guildId": "940651490459140136"
 }
